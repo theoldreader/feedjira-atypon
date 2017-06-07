@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.name     = 'feedjira-atypon'
   s.platform = Gem::Platform::RUBY
   s.summary  = 'Atypon RSS format parser for Feedjira'
-  s.version  = '0.0.1'
+  s.version  = '0.0.2'
 
   s.files         = `git ls-files`.split("\n")
   s.require_paths = ['lib']
