@@ -1,0 +1,31 @@
+language: ruby
+
+cache: bundler
+
+rvm:
+  - 2.1
+  - 2.2
+  - 2.3
+  - jruby-9
+  - ruby-head
+
+env:
+  - HANDLER=nokogiri
+  - HANDLER=ox
+  - HANDLER=oga
+
+matrix:
+  fast_finish: true
+  allow_failures:
+    - rvm: jruby-9
+    - rvm: ruby-head
+  exclude:
+    - rvm: jruby-9
+      env: HANDLER=ox
+
+before_install:
+  - gem update bundler
+
+script:
+  - bundle exec rake
+  - bundle exec danger
