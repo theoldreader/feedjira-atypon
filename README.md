@@ -40,9 +40,7 @@ Or install it yourself as:
     $ gem install feedjira-atypon
 
 ## Configuration
-You can configure `Feedjira` to use this parser in an initializer like so:
+You can configure `Feedjira` to use this parser like so:
 ```ruby
-Feedjira.configure do |config|
-  config.parsers << Feedjira::Atypon
-end
+Feedjira::Feed.add_feed_class(Feedjira::Parser::Atypon)
 ```
